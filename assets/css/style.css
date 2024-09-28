@@ -2,18 +2,45 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: "Raleway", sans-serif;
-    padding: 20px;
-  background: lightgrey;
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: center;
+  padding: 25px;
+  margin: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+img{
+  align-self: auto;
+  height: 200px;
+  width: auto;
 }
 
 /*Header/Blog Title*/
 .header{
-padding: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  padding: 10px;
   font-size: 40px;
   text-align: center;
   background: white;
+}
+
+body{
+  font-family: "Raleway", sans-serif;
+    padding: 20px;
+  background: lightgrey;
 }
 
 /*Create two unequal columns that float next to each other*/
@@ -62,9 +89,28 @@ padding: 30px;
 
 /*Responsive layout -  when the screen is less than 800px wide
 make the two columns stack on top of each other. */
-@media screen and (max-width: 800px){
+@media screen and (min-width: 0px) and (max-width:480px)
+{
+  .nav {
+    float: none;
+    width: 100%;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768)
+{
+  
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
   .leftcolumn, .rightcolumn{
     width: 100%;
     padding: 0;
   }
+
+
 }
